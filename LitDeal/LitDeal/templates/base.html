@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    {% load static %}
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+		<title>{% block title %}{% endblock %}</title>
+		<!-- favicon -->
+		<link rel="apple-touch-icon" href="{% static 'assets/images/apple-touch-icon.png' %}">
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon.ico' %}">
+        
+		<!-- Bootstrap v4.4.1 css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}"/>
+        
+        <!-- font-awesome css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}">
+		
+		<!-- Uicons Regular Rounded css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/uicons-regular-rounded.css' %}"/>
+        
+		<!-- flaticon css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/fonts/flaticon.css' %}">
+        
+		<!-- animate css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/animate.css' %}">
+
+		<!-- owl.carousel css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/owl.carousel.css' %}">
+
+		<!-- off canvas css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/off-canvas.css' %}">
+
+		<!-- magnific popup css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/magnific-popup.css' %}">
+
+		<!-- Main Menu css -->
+		<link rel="stylesheet" href="{% static 'assets/css/rsmenu-main.css' %}">
+
+		<!-- spacing css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/rs-spacing.css' %}">
+
+		<!-- style css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+
+		<!-- responsive css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'assets/css/responsive.css' %}">
+
+		
+
+	</head>
+
+	<body class="defult-home">
+
+		<div class="offwrap"></div>
+
+
+
+		<!--Preloader start here-->
+
+	   <div id="litdeal-load">
+
+			<div class="preload-wrap">
+
+	  			<img src="{% static 'assets/images/litdeal.png' %}" alt="">
+
+			</div>
+
+     	</div>
+
+		<!--Preloader area end here-->
+
+			
+
+		<!-- Main content Start -->
+
+		<div class="main-content">
+			<!--Full width header Start-->
+
+			<div class="full-width-header">
+
+				<!--Header Start-->
+
+				<header id="rs-header" class="rs-header header-style2">
+
+					<!-- Toolbar Area Start -->
+
+					<div class="toolbar-area toolber-style2 hidden-md">
+
+						<div class="container">
+
+							<div class="row rs-vertical-middle">
+
+							   <div class="col-lg-7">
+
+									<div class="toolbar-contact">
+
+										<ul class="rs-contact-info">                   
+
+											<li>
+
+	                                           <i class="fi fi-rr-envelope-plus"></i>
+
+	                                           <a href="mailto:info@litdealglobal.co.uk">info@litdealglobal.co.uk</a>
+
+	                                        </li>
+
+	                                        <li><i class="fi fi-rr-phone-call"></i><a class="no-border" href="tel:+44 123-456-7890">(+44) 123-456-7890</a></li>
+
+										</ul>
+
+									</div>
+
+								</div>
+
+								<div class="col-lg-5">
+
+									<ul class="clearfix-btn">
+
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+
+										<li><a href="#"><i class="fa fa-rss"></i></a></li>
+
+										<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+
+										<li class="btn-quote"><a href="{% url 'request_estimate' %}">Request An Estimate</a></li>
+
+									</ul>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- Toolbar Area End -->
+
+					
+
+					<!-- Menu Start -->
+
+					<div class="menu-area menu-sticky">
+
+						<div class="container">
+
+							<div class="row-table">
+
+								<div class="col-cell header-logo">                                  
+
+									<div class="logo-area normal-logo">
+
+										<a href="{% url 'index' %}"> 
+
+											<img src="{% static 'assets/images/lg.png' %}" alt="">
+
+										</a>
+
+									</div>
+
+									<div class="logo-area sticky-logo">
+
+										<a href="{% url 'index' %}"> 
+
+											<img src="{% static 'assets/images/litdeal.png' %}" alt="">
+
+										</a>
+
+									</div>
+
+								</div>
+
+								<div class="col-cell">
+
+									<div class="rs-menu-area">
+
+										<div class="main-menu">
+                                            {% block navbar %}
+                                            {% endblock %}
+
+										</div> <!-- //.main-menu -->
+
+									</div>
+
+								</div>
+
+								<div class="col-cell">
+									<div class="expand-btn-inner">
+										<ul>
+											<li class="nav-link">
+												<a id="nav-expander" class="nav-expander bar" href="#">
+													<span class="dot-hum"></span>
+													<span class="dot-hum"></span>
+													<span class="dot-hum"></span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- Menu End -->
+
+
+
+					<!-- Canvas Mobile Menu start -->
+                    <nav class="right_menu_togle mobile-navbar-menu" id="mobile-navbar-menu">
+
+                        <div class="close-btn">
+                            <a id="nav-close2" class="nav-close">
+                                <div class="line">
+                                    <span class="line1"></span>
+                                    <span class="line2"></span>
+                                </div>
+                            </a>
+                        </div>
+                    
+                        {% block canvas_nav %}
+                        {% endblock %}
+                    
+                        <div class="canvas-contact">
+                            <div class="address-area">
+                                <div class="address-list">
+                                    <div class="info-icon">
+                                        <i class="flaticon-location"></i>
+                                    </div>
+                    
+                                    <div class="info-content">
+                                        <h4 class="title">Address</h4>
+                                        <em><a href="https://maps.app.goo.gl/dCZfcNvX1g48zk5S7">
+											Street,<br>
+		 
+											United Kingdom.
+										 </a>	</em>
+                                    </div>
+                                </div>
+                    
+                                <div class="address-list">
+                                    <div class="info-icon">
+                                        <i class="flaticon-email"></i>
+                                    </div>
+                    
+                                    <div class="info-content">
+                                        <h4 class="title">Email</h4>
+                                        <em><a href="mailto:info@litdealglobal.co.uk">info@litdealglobal.co.uk</a></em>
+                                    </div>
+                                </div>
+                    
+                                <div class="address-list">
+                                    <div class="info-icon">
+                                        <i class="flaticon-call"></i>
+                                    </div>
+                    
+                                    <div class="info-content">
+                                        <h4 class="title">Phone</h4>
+                                        <em><a href="tel:(+44)123-4567890">(+44) 123-456-7890</a></em>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    
+                    </nav>
+                    
+
+					<!-- Canvas Menu end -->                             
+
+				</header>
+
+				<!--Header End-->
+
+			</div>
+
+			<!--Full width header End-->
+            {% block content %}
+            {% endblock %}
+		</div> 
+
+		<!-- Main content End -->
+
+	 
+
+		<!-- Footer Start -->
+		<footer id="rs-footer" class="rs-footer footer-style1 footer-main-home">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<!-- Company Info -->
+						<div class="col-lg-4 col-md-12 col-sm-12 md-mb-20 pr-83 md-pr-15">
+							<div class="footer-logo mb-30 md-mb-20">
+								<a href="{% url 'index' %}"><img src="{% static 'assets/images/logo-light.png' %}" alt=""></a>
+							</div>
+							<div class="textwidget mb-33">
+								Discover our professional services, dedicated to providing you with outstanding solutions and customer support.
+							</div>
+						</div>
+		
+						<!-- Contact Information -->
+						<div class="col-lg-4 col-md-12 col-sm-12 md-mb-20">
+							<h3 class="footer-title">Contact Info</h3>
+							<ul class="address-widget">
+								<li>
+									<i class="fi fi-rr-map-marker-home"></i>
+									<div class="desc"><a target="_blank" href="https://maps.app.goo.gl/dCZfcNvX1g48zk5S7">
+										Street,<br>
+	 
+										United Kingdom.
+									 </a>	</div>
+								</li>
+								<li>
+									<i class="fi fi-rr-phone-call"></i>
+									<div class="desc">
+										<a href="tel:(+44)123-4567890">(+44) 123-456-7890</a>
+									</div>
+								</li>
+								<li>
+									<i class="fi fi-rr-envelope-plus"></i>
+									<div class="desc">
+										<a href="mailto:info@litdealglobal.co.uk">info@litdealglobal.co.uk</a>
+									</div>
+								</li>
+								<li>
+									<i class="fi fi-rr-time-add"></i>
+									<div class="desc">Mon - Fri, 8:00 AM - 6:00 PM</div>
+								</li>
+							</ul>
+						</div>
+		
+						<!-- Newsletter Subscription -->
+						<div class="col-lg-4 col-md-12 col-sm-12 md-mb-20 pl-90 md-pl-15">
+							<h3 class="footer-title black-title">Subscribe to Our Newsletter</h3>
+							<p class="widget-desc">Stay updated with the latest news, offers, and tips by joining our newsletter.</p>
+							<form autocomplete="off" action="{% url 'subscribe_newsletter' %}?next={{ request.path }}" method="post">
+								{% csrf_token %}
+                                <input type="email" name="email" placeholder="Your Email" required="">
+								<input type="submit" value="Subscribe Now">
+							</form>
+							<ul class="footer-social">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row y-middle">
+						<!-- Legal and Quick Links -->
+						<div class="col-lg-6 md-mb-10 text-lg-end text-center order-last">
+							<ul class="copy-right-menu">
+								<li><a href="{% url 'index' %}">Home</a></li>
+								<li><a href="{% url 'about' %}">About</a></li>
+								<li><a href="{% url 'services' %}">Services</a></li>
+								<li><a href="{% url 'faqs' %}">FAQs</a></li>
+								<li><a href="{% url 'contact' %}">Contact</a></li>
+							</ul>
+						</div>
+						<!-- Copyright Notice -->
+						<div class="col-lg-6">
+							<div class="copyright text-lg-start text-center">
+								<p>&copy; <script>document.write(new Date().getFullYear())</script> LitDeal Global. All rights reserved.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		<!-- Footer End -->
+
+
+		<!-- start scrollUp  -->
+
+		<div id="scrollUp">
+
+			<i class="fi fi-rr-arrow-small-up"></i>
+
+		</div>
+
+		<!-- End scrollUp  -->
+
+
+		<!-- modernizr js -->
+
+		<script src="{% static 'assets/js/modernizr-2.8.3.min.js' %}"></script>
+
+		<!-- jquery latest version -->
+
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+
+		<!-- Bootstrap v4.4.1 js -->
+
+		<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+		<!-- op nav js -->
+
+		<script src="{% static 'assets/js/jquery.nav.js' %}"></script>
+
+		<!-- owl.carousel js -->
+
+		<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+
+		<!-- wow js -->
+
+		<script src="{% static 'assets/js/wow.min.js' %}"></script>
+
+		<!-- Skill bar js -->
+
+		<script src="{% static 'assets/js/skill.bars.jquery.js' %}"></script>
+
+		<!-- imagesloaded js -->
+
+		<script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+
+		<!-- waypoints.min js -->
+
+		<script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+
+		<script src="{% static 'assets/js/jquery.easypiechart.min.js' %}"></script> 
+
+		<!-- counterup.min js -->
+
+		<script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script> 
+
+		<!-- magnific popup js -->
+
+		<script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+
+		<!-- main js -->
+
+		<script src="{% static 'assets/js/main.js' %}"></script>
+
+        {% block extra_scripts  %}{% endblock %}
+
+	</body>
+
+</html>

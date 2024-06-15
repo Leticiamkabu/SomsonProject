@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Unsubscribe Success | Nmefran Limited {% endblock %}
+{% block navbar%}
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <a href="#" class="navbar-brand ms-3 d-lg-none">MENU</a>
+    <button type="button" class="navbar-toggler me-3" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav me-auto p-3 p-lg-0">
+            <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
+            <a href="{% url 'about' %}" class="nav-item nav-link">About Us</a>
+            <a href="{% url 'services' %}" class="nav-item nav-link">Services</a>
+            <a href="{% url 'contact' %}" class="nav-item nav-link">Contact Us</a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+{% endblock %}
+{% block content%}
+
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-4 text-white animated slideInDown mb-3">Page Not Found</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="{% url 'index' %}">Home</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Page Not Found</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <section>
+      <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row">
+          <div class="container d-flex align-items-center text-center justify-content-center">
+            <div class="col-md-6 col-sm-8">
+                <div class="card text-center login-card">
+                    <div class="card-header h5 " style="pointer-events: none;">Unsubscribe Successful</div>
+                    <div class="card-body px-5">
+                        
+                        <p  class="card-text py-2"> We have successfully unsubscribed you from our newsletter. While we're sad to see you leave, we respect your decision. If you ever change your mind, feel free to resubscribe anytime.</p>
+                        <p  class="card-text py-2">Thank you for being a part of our community. We wish you all the best!</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+   {% endblock %}

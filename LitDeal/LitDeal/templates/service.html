@@ -1,0 +1,324 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Our Services | LitDeal Global {% endblock %}
+{% block navbar%}
+<nav class="rs-menu hidden-md">
+	<ul class="nav-menu">
+
+		<li class="menu-item">
+			<a href="{% url 'index' %}">Home</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="{% url 'about' %}">About</a>
+		</li>
+
+		<li class="menu-item current-menu-item">
+			<a href="{% url 'services' %}">Services</a>
+		</li>
+
+		<li>
+			<a href="{% url 'contact' %}">Contact</a>
+		</li>
+
+	</ul> <!-- //.nav-menu -->
+</nav>
+{% endblock %}
+
+{% block canvas_nav %}
+
+<ul class="nav-menu">
+
+	<li class="menu-item">
+		<a href="{% url 'index' %}">Home</a>
+	</li>
+
+	<li class="menu-item">
+		<a href="{% url 'about' %}">About</a>                                                     
+	</li>
+
+	<li class="menu-item current-menu-item">
+		<a href="{% url 'services' %}">Services</a>
+	</li>
+
+	<li>
+		<a href="{% url 'contact' %}">Contact</a>
+	</li>
+
+</ul>
+
+{% endblock %}
+
+{% block content %}
+<div class="rs-breadcrumbs img1">
+    <div class="container">
+        <div class="breadcrumbs-inner">
+            <h1 class="page-title">Our Services</h1>
+            <div class="description">
+                <p>Explore our range of services tailored to meet your needs.<br> From residential to commercial cleaning, we've got you covered.</p>
+            </div>                       
+        </div>
+    </div>
+</div>
+
+<div class="rs-about pt-50 pb-50 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-lg-6 pr-53 md-pr-15 md-mb-50">
+                <div class="sec-title2">
+                    <div class="brush-content mb-20">
+                        <img src="{% static 'assets/images/brush.png' %}" alt="">
+                        <span class="sub-text">Residential Cleaning Services</span>
+                    </div>
+                    <h2 class="title pb-28">
+                        Your Home is in Safe and Trustworthy Hands
+                    </h2>
+                    <div class="desc pb-21">
+                        We offer comprehensive residential cleaning services to ensure your home is clean, comfortable, and healthy for you and your family.
+                    </div>
+                    <ul class="brush-list style3">
+                        <li>Flexible scheduling options: daily, weekly, or monthly cleaning</li>
+                        <li>Kitchen and restroom cleaning and restocking</li>
+                        <li>Dusting and window washing</li>
+                        <li>Daily carpet care services</li>
+                        <li>Efficient waste removal</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+               <div class="services-img">
+                    <img src="{% static 'assets/images/residential-cleaning.jpg' %}" alt="Residential Cleaning">
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rs-about pt-50 pb-50 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-lg-6">
+               <div class="services-img">
+                    <img src="{% static 'assets/images/commercial-cleaning.jpg' %}" alt="Commercial Cleaning">
+               </div>
+            </div>
+            <div class="col-lg-6 pr-53 md-pr-15 md-mb-50">
+                <div class="sec-title2">
+                    <div class="brush-content mb-20">
+                        <img src="{% static 'assets/images/brush.png' %}" alt="">
+                        <span class="sub-text">Commercial Cleaning Services</span>
+                    </div>
+                    <h2 class="title pb-28">
+                        Your Workplace Deserves the Best Cleanliness
+                    </h2>
+                    <div class="desc pb-21">
+                        Our commercial cleaning services are designed to maintain a clean and hygienic environment in your workplace, ensuring a healthy and productive atmosphere for your employees and clients.
+                    </div>
+                    <ul class="brush-list style3">
+                        <li>Customized cleaning plans for offices, shops, and commercial buildings</li>
+                        <li>Specialized cleaning for restrooms, floors, and common areas</li>
+                        <li>Window cleaning and surface disinfection</li>
+                        <li>Carpet cleaning and maintenance</li>
+                        <li>Trash removal and waste management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rs-about pt-50 pb-50 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-lg-6 pr-53 md-pr-15 md-mb-50">
+                <div class="sec-title2">
+                    <div class="brush-content mb-20">
+                        <img src="{% static 'assets/images/brush.png' %}" alt="">
+                        <span class="sub-text">Post-Construction Cleaning Services</span>
+                    </div>
+                    <h2 class="title pb-28">
+                        Transforming Construction Sites into Spotless Spaces
+                    </h2>
+                    <div class="desc pb-21">
+                        Our post-construction cleaning services ensure that newly built or renovated properties are thoroughly cleaned and free of debris, dust, and other construction residues, providing a clean and safe environment for occupants.
+                    </div>
+                    <ul class="brush-list style3">
+                        <li>Removal of construction debris and dust</li>
+                        <li>Deep cleaning of floors, walls, and surfaces</li>
+                        <li>Window cleaning and polishing</li>
+                        <li>Final touch-ups and detailing</li>
+                        <li>Disinfection and sanitization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+               <div class="services-img">
+                    <img src="{% static 'assets/images/post-construction-cleaning.jpg' %}" alt="Post-Construction Cleaning">
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rs-about pt-50 pb-50 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-lg-6">
+               <div class="services-img">
+                    <img src="{% static 'assets/images/carpet-cleaning.jpg' %}" alt="Carpet Cleaning">
+               </div>
+            </div>
+            <div class="col-lg-6 pr-53 md-pr-15 md-mb-50">
+                <div class="sec-title2">
+                    <div class="brush-content mb-20">
+                        <img src="{% static 'assets/images/brush.png' %}" alt="">
+                        <span class="sub-text">Carpet Cleaning Services</span>
+                    </div>
+                    <h2 class="title pb-28">
+                        Reviving Your Carpets to Their Former Glory
+                    </h2>
+                    <div class="desc pb-21">
+                        Our professional carpet cleaning services utilize advanced techniques and eco-friendly solutions to effectively remove stains, dirt, and allergens from carpets, leaving them fresh, clean, and rejuvenated.
+                    </div>
+                    <ul class="brush-list style3">
+                        <li>Steam cleaning and hot water extraction</li>
+                        <li>Spot treatment for stubborn stains</li>
+                        <li>Deep cleaning to remove dirt and allergens</li>
+                        <li>Quick drying for minimal disruption</li>
+                        <li>Eco-friendly and non-toxic cleaning solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rs-about pt-50 pb-50 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-lg-6 pr-53 md-pr-15 md-mb-50">
+                <div class="sec-title2">
+                    <div class="brush-content mb-20">
+                        <img src="{% static 'assets/images/brush.png' %}" alt="">
+                        <span class="sub-text">Emergency Cleaning Services</span>
+                    </div>
+                    <h2 class="title pb-28">
+                        Prompt and Reliable Cleaning Solutions When You Need Them Most
+                    </h2>
+                    <div class="desc pb-21">
+                        Our emergency cleaning services are available round-the-clock to address urgent cleaning needs caused by unforeseen events such as accidents, spills, or natural disasters. We respond swiftly to restore cleanliness and safety to your property.
+                    </div>
+                    <ul class="brush-list style3">
+                        <li>24/7 emergency response team</li>
+                        <li>Rapid cleanup and restoration services</li>
+                        <li>Specialized equipment for efficient cleaning</li>
+                        <li>Thorough sanitization and disinfection</li>
+                        <li>Trusted professionals ensuring peace of mind</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6">
+               <div class="services-img">
+                    <img src="{% static 'assets/images/emergency-cleaning.jpg' %}" alt="Emergency Cleaning">
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="rs-about pt-50 pb-50 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-lg-6">
+               <div class="services-img">
+                    <img src="{% static 'assets/images/green-cleaning.jpg' %}" alt="Green Cleaning">
+               </div>
+            </div>
+            <div class="col-lg-6 pr-53 md-pr-15 md-mb-50">
+                <div class="sec-title2">
+                    <div class="brush-content mb-20">
+                        <img src="{% static 'assets/images/brush.png' %}" alt="">
+                        <span class="sub-text">Green Cleaning Services</span>
+                    </div>
+                    <h2 class="title pb-28">
+                        Protecting Your Health and the Environment with Eco-Friendly Cleaning
+                    </h2>
+                    <div class="desc pb-21">
+                        Our green cleaning services utilize environmentally friendly products and sustainable practices to minimize environmental impact while ensuring a safe and healthy living or working environment for you and your loved ones.
+                    </div>
+                    <ul class="brush-list style3">
+                        <li>Eco-friendly cleaning products and methods</li>
+                        <li>Reduced carbon footprint and waste generation</li>
+                        <li>Healthier indoor air quality and surroundings</li>
+                        <li>Safe for pets, children, and allergy sufferers</li>
+                        <li>Contributing to a greener and more sustainable future</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="rs-services services-style2 gray-bg pt-120 pb-115 md-pt-80 md-pb-80">
+    <div class="container custom">
+        <div class="sec-title2 text-center mb-45">
+            <div class="brush-content center-text mb-20">
+                <img src="{% static 'assets/images/brush.png' %}" alt="">
+                <span class="sub-text">Other Cleaning Services</span>
+            </div>
+            <h2 class="title">
+                Extra Cleaning<br>
+                Services For You
+            </h2>
+        </div>
+
+        <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="true" data-nav="true" data-nav-speed="false" data-center-mode="true" data-mobile-device="1" data-mobile-device-nav="true" data-mobile-device-dots="true" data-ipad-device="2" data-ipad-device-nav="true" data-ipad-device-dots="true" data-ipad-device2="2" data-ipad-device-nav2="true" data-ipad-device-dots2="true" data-md-device="3" data-md-device-nav="true" data-md-device-dots="true">
+            <div class="services-slider">
+                <div class="services-item">
+                    <div class="services-content">
+                        <h3 class="title">Medical Facility Cleaning</h3>
+                        <p class="description">Tailored cleaning solutions provided specifically for hospitals and clinics, adhering to rigorous safety and cleanliness standards.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-slider">
+                <div class="services-item">
+                    <div class="services-content">
+                        <h3 class="title">Move-in/Move-out Cleaning</h3>
+                        <p class="description">Detailed cleaning solutions for properties during the transition between tenants to ensure a flawless and clean space.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-slider">
+                <div class="services-item">
+                    <div class="services-content">
+                        <h3 class="title">Sports Cleaning</h3>
+                        <p class="description">Comprehensive cleaning services designed for gyms and sports facilities to maintain a germ-free and sanitized environment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-slider">
+                <div class="services-item">
+                    <div class="services-content">
+                        <h3 class="title">School Cleaning</h3>
+                        <p class="description">Comprehensive cleaning solutions for both public and private schools, encompassing floor mopping, bathroom sanitation, classroom upkeep, and surface cleaning of desks and tables.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-slider">
+                <div class="services-item">
+                    <div class="services-content">
+                        <h3 class="title">Deep Cleaning</h3>
+                        <p class="description">Extensive cleaning services targeting hard-to-reach and often neglected areas. Tasks include cleaning behind appliances, grout scrubbing, wood polishing, ceiling fan cleaning, upholstery vacuuming, and sanitizing high-touch surfaces.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}

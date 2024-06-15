@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Request An Estimate | LitDeal Global {% endblock %}
+{% block navbar%}
+<nav class="rs-menu hidden-md">
+	<ul class="nav-menu">
+
+		<li class="menu-item">
+			<a href="{% url 'index' %}">Home</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="{% url 'about' %}">About</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="{% url 'services' %}">Services</a>
+		</li>
+
+		<li>
+			<a href="{% url 'contact' %}">Contact</a>
+		</li>
+
+	</ul> <!-- //.nav-menu -->
+</nav>
+{% endblock %}
+
+{% block canvas_nav %}
+
+<ul class="nav-menu">
+
+	<li class="menu-item">
+		<a href="{% url 'index' %}">Home</a>
+	</li>
+
+	<li class="menu-item">
+		<a href="{% url 'about' %}">About</a>                                                     
+	</li>
+
+	<li class="menu-item">
+		<a href="{% url 'services' %}">Services</a>
+	</li>
+
+	<li>
+		<a href="{% url 'contact' %}">Contact</a>
+	</li>
+
+</ul>
+
+{% endblock %}
+
+{% block content %}
+<div class="rs-breadcrumbs img1">
+    <div class="container">
+        <div class="breadcrumbs-inner">
+            <h1 class="page-title">Request an Estimate</h1>
+            <div class="description">
+                <p>Interested in our services? Request an estimate today!<br> Simply fill out the form below and we'll get back to you.</p>
+            </div>                       
+        </div>
+    </div>
+</div>
+
+<div class="rs-contact contact-style4 gray-bg5 pt-120 pb-120 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 md-mb-50">
+                <div class="request-estimate">
+                    <img src="{% static 'assets/images/estimate.jpg' %}" alt="">
+                </div>
+                <div class="address-list-item mb-20">
+                    <div class="address-icon">
+                        <img src="{% static 'assets/images/contact/style1/1.png' %}" alt="Contact">
+                    </div>
+                    <div class="address-content">
+                        <div class="address-title">				    		    
+                            <h2 class="title"> UK Office</h2>	    		
+                        </div>
+                        <p class="services-txt"><a class="services-txt" href="https://maps.app.goo.gl/dCZfcNvX1g48zk5S7">United Kingdom.</a><br><a class="services-txt" href="mailto:info@litdealglobal.co.uk">info@litdealglobal.co.uk</a><br><a class="services-txt" href="tel:(+44)123-4567890">(+44) 123-456-7890</a></p>
+                    </div>
+                </div>
+                <div class="address-list-item">
+                    <div class="address-icon">
+                        <img src="{% static 'assets/images/contact/style1/1.png' %}" alt="Contact">
+                    </div>
+                    <div class="address-content">
+                        <div class="address-title">				    		    
+                            <h2 class="title"> UK Office</h2>	    		
+                        </div>
+                        <p class="services-txt"><a class="services-txt" href="https://maps.app.goo.gl/dCZfcNvX1g48zk5S7">United Kingdom.</a><br><a class="services-txt" href="mailto:info@litdealglobal.co.uk">info@litdealglobal.co.uk</a><br><a class="services-txt" href="tel:(+44)123-4567890">(+44) 123-456-7890</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="contact-wrap">
+                    <div class="sec-title2 mb-30">
+                        <h2 class="title small white-color">Schedule Free Estimate</h2>
+                    </div>
+                    <form id="req-est" method="POST" action="{% url 'request_estimate' %}">
+                        {% csrf_token %}
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-lg-12 mb-22">
+                                    <div class="form-group">
+                                        <label>Name*</label>
+                                        <input type="text" name="name" class="form-control-mod" id="name" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6 col-md-6 col-sm-6 mb-22">
+                                    <div class="form-group">
+                                        <label>Phone number*</label>
+                                        <input id="phone" name="phone" class="form-control-mod" type="number" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 mb-22">
+                                    <div class="form-group">
+                                        <label>Email*</label>
+                                        <input id="email" name="email" class="form-control-mod" type="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 mb-22">
+                                    <div class="form-group">
+                                        <label>Select Services*</label>
+                                        <select name="consultation" id="consultation" class="wpcf7-form-control wpcf7-select" required>
+
+                                            <option selected disabled value="">Select Services</option>
+                                        
+                                            <option value="Residential Cleaning">Residential Cleaning</option>
+                                        
+                                            <option value="Commercial Cleaning">Commercial Cleaning</option>
+                                        
+                                            <option value="Post-Construction Cleaning">Post-Construction Cleaning</option>
+                                        
+                                            <option value="Carpet Cleaning">Carpet Cleaning</option>
+                                        
+                                            <option value="Emergency Cleaning">Emergency Cleaning</option>
+                                        
+                                            <option value="Green Cleaning">Green Cleaning</option>
+                                        
+                                            <option value="Move-in/Move-out Cleaning">Move-in/Move-out Cleaning</option>
+                                        
+                                            <option value="Sports Cleaning">Sports Cleaning</option>
+                                        
+                                            <option value="Medical Cleaning">Medical Facility Cleaning</option>
+                                        
+                                            <option value="School Cleaning">School Cleaning</option>
+                                        
+                                            <option value="Deep Cleaning">Deep Cleaning</option>
+                                        
+                                        </select>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 mb-22">
+                                    <div class="form-group">
+                                        <label>Service Frequency*</label>
+                                        <select name="frequency" id="frequency" class="wpcf7-form-control wpcf7-select" required>
+                                            <option selected disabled value="">Please select</option>
+                                            <option value="One Time">One Time</option>
+                                            <option value="Daily">Daily</option>
+                                            <option value="Weekly">Weekly</option>
+                                            <option value="BiWeekly">BiWeekly</option>
+                                            <option value="Monthly">Monthly</option>
+                                            <option value="Quarterly">Quarterly</option>
+                                            <option value="Semi-Annually">Semi-Annually</option>
+                                            <option value="Annually">Annually</option>
+                                        </select>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 mb-22">
+                                    <div class="form-group">
+                                        <label>How did you hear about us?</label>
+                                        <select name="pub" id="pub" class="wpcf7-form-control wpcf7-select" required>
+                                            <option selected disabled value="">Please select</option>
+                                            <option value="Google Ads">Google Ads</option>
+                                            <option value="Facebook">Facebook</option>
+                                            <option value="Email">Email</option>
+                                            <option value="Instagram">Instagram</option>
+                                            <option value="LinkedIn">LinkedIn</option>
+                                            <option value="Referral">Referral</option>
+                                            <option value="Twitter">Twitter</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-25">
+                                    <div class="form-group">
+                                        <label>Comments/Questions</label>
+                                        <textarea name="comments" id="comments" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="form-messages" class="mb-10" style="font-weight: bold;color: #fff;"></div>
+                    
+                            <div class="btn-part">
+                                <div class="form-group mb-0">
+                                    <p class="submit-btn">
+                                        <input type="submit" value="Submit Now">
+                                    </p>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="preloader"></div>
+
+{% endblock %}
+{% block extra_scripts %}
+<script src="{% static 'assets/js/req-estimate.js' %}"></script>
+{% endblock %}

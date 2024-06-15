@@ -1,0 +1,901 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} LitDeal Global - Discover A New Difference {% endblock %}
+{% block navbar%}
+<nav class="rs-menu hidden-md">
+	<ul class="nav-menu">
+
+		<li class="menu-item current-menu-item">
+			<a href="{% url 'index' %}">Home</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="{% url 'about' %}">About</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="{% url 'services' %}">Services</a>
+		</li>
+
+		<li>
+			<a href="{% url 'contact' %}">Contact</a>
+		</li>
+
+	</ul> <!-- //.nav-menu -->
+</nav>
+{% endblock %}
+
+{% block canvas_nav %}
+
+<ul class="nav-menu">
+
+	<li class="menu-item current-menu-item">
+		<a href="{% url 'index' %}">Home</a>
+	</li>
+
+	<li class="menu-item">
+		<a href="{% url 'about' %}">About</a>                                                     
+	</li>
+
+	<li class="menu-item">
+		<a href="{% url 'services' %}">Services</a>
+	</li>
+
+	<li>
+		<a href="{% url 'contact' %}">Contact</a>
+	</li>
+
+</ul>
+
+{% endblock %}
+
+{% block content %}
+<!-- Slider Section Start -->
+<div class="rs-slider slide-home-style2">
+
+	<div class="container">
+
+		<div class="row y-middle">
+
+			<div class="col-lg-5">
+
+				<div class="content-wrap">
+
+					<div class="brush-content mb-20">
+
+						<img src="{% static 'assets/images/brush.png' %}" alt="">
+
+						<span class="sub-text">LitDeal Global Provides</span>
+
+					</div>
+
+					<h1 class="title wow fadeInLeft" style="animation-delay: 800ms; animation-duration: 2000ms;">Professional &amp; Skilled Cleaners</h1>
+
+
+					<div class="btn-part mt-30">
+
+						<a class="readon view-slide" href="{% url 'services' %}">
+
+							<span>View All Services</span>
+
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="col-lg-7">
+
+				<div class="slide-img">
+
+					<div class="rs-carousel owl-carousel" data-loop="true" data-items="1" data-margin="0" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="true" data-nav="false" data-nav-speed="false" data-center-mode="true" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="true" data-ipad-device="1" data-ipad-device-nav="false" data-ipad-device-dots="true" data-ipad-device2="1" data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-md-device="1" data-md-device-nav="false" data-md-device-dots="true">
+
+						<div class="slider-item">
+
+							<div class="images-part">
+
+								<img src="{% static 'assets/images/index1.jpg' %}" alt="">
+
+							</div>
+
+						</div>
+
+						<div class="slider-item">
+
+							<div class="images-part">
+
+								<img src="{% static 'assets/images/index2.jpg' %}" alt="">
+
+							</div>
+
+						</div>
+
+						<div class="slider-item">
+
+							<div class="images-part">
+
+								<img src="{% static 'assets/images/index3.jpg' %}" alt="">
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Slider Section End -->
+
+
+
+<!-- Newsletter Section Start -->
+<div class="rs-newsletter newsletter-style1 yellow-bg pt-70 pb-74">
+
+	<div class="container">
+
+		<div class="sec-title mb-25">
+
+			<span class="title title2">
+
+				Request an Estimate
+
+			</span>
+
+		</div>
+
+		<div class="newsletter-form">
+			
+			<div id="form-messages" class="mb-10" style="font-weight: bold;color: #01539F;"></div>
+			<form id="req-est" method="POST" action="{% url 'request_short_estimate' %}">
+				{% csrf_token %}
+			<div class="row">
+				
+
+				<div class="col-lg-3 col-md-6 pr-20 md-pr-15 md-mb-20">
+
+					<input type="text" id="name" name="client-name" placeholder="Your Name" required>
+
+				</div>
+
+				<div class="col-lg-3 col-md-6 pr-20 md-pr-15 md-mb-20">
+
+					<input type="email" id="email" name="client-email" required  placeholder="Your Email">
+
+				</div>
+
+				<div class="col-lg-3 col-md-6 pr-20 md-pr-15 sm-mb-20">
+
+					<select name="consultation" id="consultation" class="wpcf7-form-control wpcf7-select" required>
+
+						<option selected disabled value="">Select Services</option>
+					
+						<option value="Residential Cleaning">Residential Cleaning</option>
+					
+						<option value="Commercial Cleaning">Commercial Cleaning</option>
+					
+						<option value="Post-Construction Cleaning">Post-Construction Cleaning</option>
+					
+						<option value="Carpet Cleaning">Carpet Cleaning</option>
+					
+						<option value="Emergency Cleaning">Emergency Cleaning</option>
+					
+						<option value="Green Cleaning">Green Cleaning</option>
+					
+						<option value="Move-in/Move-out Cleaning">Move-in/Move-out Cleaning</option>
+					
+						<option value="Sports Cleaning">Sports Cleaning</option>
+					
+						<option value="Medical Cleaning">Medical Facility Cleaning</option>
+					
+						<option value="School Cleaning">School Cleaning</option>
+					
+						<option value="Deep Cleaning">Deep Cleaning</option>
+					
+					</select>
+					
+
+				</div>
+
+				<div class="col-lg-3 col-md-6 md-pr-20 md-pr-15">
+
+					<div class="form-group mb-0">
+
+						<p class="submit-btn submit-btn2 form">
+
+							<span class="arrow-btn">
+
+								<input type="submit" value="Submit Now">
+
+							</span>
+
+						</p>
+
+					</div>
+
+				</div>
+				
+
+			</div>
+			</form>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Newsletter Section End -->
+
+<!-- About Section Start -->
+<div id="rs-about" class="rs-about style2 pt-125 pb-130 md-pt-85 md-pb-80">
+
+	<div class="container">
+
+		<div class="row y-middle">
+
+			<div class="col-lg-6 md-mb-50">
+
+			   <div class="about-images">
+
+				   <img src="{% static 'assets/images/about-index.jpg' %}" alt="">
+
+				   <div class="about-animation">
+
+						   <div class="animation cleaning-img">
+
+							   <img class="scale" src="{% static 'assets/images/cleaning.png' %}" alt="">
+
+						   </div>
+
+				   </div>
+
+					   <div class="rs-animate-ab2 wow fadeInLeft new">
+
+						   <div class="rs-pie-content">
+
+							   <div class="rs-pie" data-percent="98" data-scale-color="#99E7E9"><span>98%</span></div>
+
+							   <div class="number">Customers <br>Satisfied</div>
+
+						   </div>
+
+					   </div>
+
+			   </div>
+
+			</div>
+
+			<div class="col-lg-6">
+
+				<div class="sec-title2 mb-40">
+
+					<div class="brush-content mb-20">
+
+						<img src="{% static 'assets/images/brush.png' %}" alt="">
+
+						<span class="sub-text">About LitDeal Global</span>
+
+					</div>
+
+					<div>
+						<h2 class="title pb-35">
+							LitDeal Global: Premier Cleaning Services
+						</h2>
+						<div class="desc">
+							Welcome to LitDeal Global, where we transform spaces with our expert cleaning services for both residential and commercial clients. Our team of certified professionals is committed to excellence, using eco-friendly products and advanced technology to ensure a clean, healthy, and safe environment.
+					
+							We take pride in our meticulous approach and reliable service, offering customized solutions to meet the unique needs of each client. From deep cleaning to regular maintenance, LitDeal Global is your partner in maintaining pristine environments. Trust us to elevate your experience with unparalleled cleanliness and care.
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- About Section End -->
+
+<!-- Services Section Start -->
+<div class="rs-services services-style2 gray-bg pt-120 pb-115 md-pt-80 md-pb-80">
+
+	<div class="container custom">
+
+		<div class="sec-title2 text-center mb-45">
+
+			<div class="brush-content center-text mb-20">
+
+				<img src="{% static 'assets/images/brush.png' %}" alt="">
+
+				<span class="sub-text"> What We Do</span>
+
+			</div>
+
+			<h2 class="title">
+
+				Our Most Popular Cleaning<br>
+
+				Services For You
+
+			</h2>
+
+		</div>
+
+		<div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="true" data-nav="true" data-nav-speed="false" data-center-mode="true" data-mobile-device="1" data-mobile-device-nav="true" data-mobile-device-dots="true" data-ipad-device="2" data-ipad-device-nav="true" data-ipad-device-dots="true" data-ipad-device2="2" data-ipad-device-nav2="true" data-ipad-device-dots2="true" data-md-device="3" data-md-device-nav="true" data-md-device-dots="true">
+
+			<div class="services-slider">
+
+				<div class="services-item">
+					<div class="services-img">
+						<a href="{% url 'services' %}">
+							<img src="{% static 'assets/images/services/style1/1.png' %}" title="Residential Cleaning" alt="Residential Cleaning">
+						</a>
+					</div>
+					<div class="services-content">
+						<h3 class="title"><a href="{% url 'services' %}">Residential Cleaning</a></h3>
+						<p class="description">Comprehensive cleaning services for homes, ensuring a clean and inviting living space.</p>
+						<div class="services-btn">
+							<a href="{% url 'services' %}">
+								<span class="btn-text">Read More</span>
+								<i class="fi fi-rr-arrow-small-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="services-slider">
+
+				<div class="services-item">
+					<div class="services-img">
+						<a href="{% url 'services' %}">
+							<img src="{% static 'assets/images/services/style1/4.png' %}" title="Commercial Cleaning" alt="Commercial Cleaning">
+						</a>
+					</div>
+					<div class="services-content">
+						<h3 class="title"><a href="{% url 'services' %}">Commercial Cleaning</a></h3>
+						<p class="description">Specialized cleaning solutions for businesses and commercial properties.</p>
+						<div class="services-btn">
+							<a href="{% url 'services' %}">
+								<span class="btn-text">Read More</span>
+								<i class="fi fi-rr-arrow-small-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="services-slider">
+				<div class="services-item">
+					<div class="services-img">
+						<a href="post-construction-cleaning.html">
+							<img src="{% static 'assets/images/services/style1/3.png' %}" title="Post-Construction Cleaning" alt="Post-Construction Cleaning">
+						</a>
+					</div>
+					<div class="services-content">
+						<h3 class="title"><a href="post-construction-cleaning.html">Post-Construction</a></h3>
+						<p class="description">Thorough cleaning following construction or renovation, ensuring a safe and pristine environment.</p>
+						<div class="services-btn">
+							<a href="post-construction-cleaning.html">
+								<span class="btn-text">Read More</span>
+								<i class="fi fi-rr-arrow-small-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+			
+
+			<div class="services-slider">
+
+				<div class="services-item">
+					<div class="services-img">
+						<a href="carpet-cleaning.html">
+							<img src="{% static 'assets/images/services/style1/2.png' %}" title="Carpet Cleaning" alt="Carpet Cleaning">
+						</a>
+					</div>
+					<div class="services-content">
+						<h3 class="title"><a href="{% url 'services' %}">Carpet Cleaning</a></h3>
+						<p class="description">Professional carpet cleaning to keep your carpets looking fresh and pristine.</p>
+						<div class="services-btn">
+							<a href="{% url 'services' %}">
+								<span class="btn-text">Read More</span>
+								<i class="fi fi-rr-arrow-small-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="services-slider">
+
+				<div class="services-item">
+					<div class="services-img">
+						<a href="{% url 'services' %}">
+							<img src="{% static 'assets/images/services/style1/5.png' %}" title="Emergency Cleaning" alt="Emergency Cleaning">
+						</a>
+					</div>
+					<div class="services-content">
+						<h3 class="title"><a href="{% url 'services' %}">Emergency Cleaning</a></h3>
+						<p class="description">Rapid-response cleaning services for unexpected situations and post-disaster cleanup.</p>
+						<div class="services-btn">
+							<a href="{% url 'services' %}">
+								<span class="btn-text">Read More</span>
+								<i class="fi fi-rr-arrow-small-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="services-slider">
+
+				<div class="services-item">
+					<div class="services-img">
+						<a href="{% url 'services' %}">
+							<img src="{% static 'assets/images/services/style1/6.png' %}" title="Green Cleaning" alt="Green Cleaning">
+						</a>
+					</div>
+					<div class="services-content">
+						<h3 class="title"><a href="{% url 'services' %}">Green Cleaning</a></h3>
+						<p class="description">Eco-friendly cleaning solutions that prioritize sustainability and environmental responsibility.</p>
+						<div class="services-btn">
+							<a href="{% url 'services' %}">
+								<span class="btn-text">Read More</span>
+								<i class="fi fi-rr-arrow-small-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Services Section End -->		
+
+<!-- Why Choose Start -->
+
+<div class="rs-choose choose-style2">
+
+	<div class="row y-middle">
+
+		<div class="col-lg-2 choose-width"></div>
+
+		<div class="col-lg-4 choose-width">
+
+			<div class="choose-main-part">
+
+				<div class="sec-title2 mb-40">
+
+					<div class="brush-content mb-20">
+
+						<img src="{% static 'assets/images/brush.png' %}" alt="">
+
+						<span class="sub-text"> Why Choose Us</span>
+
+					</div>
+
+					<h2 class="title">
+
+						There Some Reasons to Hire The LitDeal Global
+
+					</h2>
+
+				</div>
+
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+						<div class="services-part">
+							<div class="services-icon">
+								<img src="{% static 'assets/images/choose/style2/icons/1.png' %}" alt="Eco-Friendly Cleaning Agents">
+							</div>
+							<div class="services-txt">
+								<h4 class="title">Eco-Friendly Cleaning Agents</h4>
+								<div class="serial-number">01</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 mb-30">
+						<div class="services-part">
+							<div class="services-icon">
+								<img src="{% static 'assets/images/choose/style2/icons/2.png' %}" alt="Customized Cleaning Plans">
+							</div>
+							<div class="services-txt">
+								<h4 class="title">Customized Cleaning Plans</h4>
+								<div class="serial-number">02</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 xs-mb-30">
+						<div class="services-part">
+							<div class="services-icon">
+								<img src="{% static 'assets/images/choose/style2/icons/3.png' %}" alt="Advanced Sanitization Procedures">
+							</div>
+							<div class="services-txt">
+								<h4 class="title">Advanced Sanitization Procedures</h4>
+								<div class="serial-number">03</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6">
+						<div class="services-part">
+							<div class="services-icon">
+								<img src="{% static 'assets/images/choose/style2/icons/1.png' %}" alt="Pet-Friendly Cleaning Solutions">
+							</div>
+							<div class="services-txt">
+								<h4 class="title">Pet-Friendly Cleaning Solutions</h4>
+								<div class="serial-number">04</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+			</div>
+
+		</div>
+
+		<div class="col-lg-6">
+
+			<div class="video-img">
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Why Choose End -->
+	
+<!-- Counter Section Start -->
+<div class="rs-counter counter-style blue-bg pt-120 pb-120 md-pt-80 md-pb-80">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 md-mb-40">
+				<div class="rs-counter-list">
+					<div class="counter-text">
+						<div class="counter-icon">
+							<img src="{% static 'assets/images/counter/icons/1.png' %}" alt="">
+						</div>
+						<div class="counter-number">
+							<span class="rs-count">500</span>
+							<span class="prefix">+</span>
+							<h5 class="title">Services Provided</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-lg-4 md-mb-40">
+				<div class="rs-counter-list">
+					<div class="counter-text">
+						<div class="counter-icon">
+							<img src="{% static 'assets/images/counter/icons/2.png' %}" alt="">
+						</div>
+						<div class="counter-number">
+							<span class="rs-count">1200</span>
+							<span class="prefix">+</span>
+							<h5 class="title">Orders Served</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="col-lg-4">
+				<div class="rs-counter-list">
+					<div class="counter-text">
+						<div class="counter-icon">
+							<img src="{% static 'assets/images/counter/icons/3.png' %}" alt="">
+						</div>
+						<div class="counter-number">
+							<span class="rs-count">800</span>
+							<span class="prefix">+</span>
+							<h5 class="title">Satisfied Clients</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="counter-animation">
+		<div class="animate-ball one">
+			<img class="scale" src="{% static 'assets/images/ball.png' %}" alt="">
+		</div>
+		<div class="animate-ball two">
+			<img class="rotated-style2" src="{% static 'assets/images/ball.png' %}" alt="">
+		</div>
+		<div class="animate-ball three">
+			<img class="rotated-style2" src="{% static 'assets/images/ball.png' %}" alt="">
+		</div>
+		<div class="animate-ball four">
+			<img class="scale" src="{% static 'assets/images/ball.png' %}" alt="">
+		</div>
+		<div class="animate-ball five">
+			<img class="rotated-style2" src="{% static 'assets/images/ball.png' %}" alt="">
+		</div>
+		<div class="animate-ball six">
+			<img class="scale" src="{% static 'assets/images/ball.png' %}" alt="">
+		</div>
+	</div>
+	
+
+</div>
+
+<!-- Counter Section End -->
+
+<!-- How Work Section Start -->
+
+<div id="rs-services" class="rs-services services-lte">
+
+	<div class="row y-middle">
+
+		<div class="col-lg-6 services-width pr-40">
+
+			<div class="images-bg"></div>
+
+		</div>
+
+		<div class="col-lg-4 services-width pl-40">
+
+			<div class="services-main-part">
+				<div class="sec-title2 mb-30">
+					<div class="brush-content mb-20">
+						<img src="{% static 'assets/images/brush.png' %}" alt="">
+						<span class="sub-text"> Our Process</span>
+					</div>
+					<h2 class="title">
+						Steps to Engage<br>
+						Our Services
+					</h2>
+				</div>
+				<div class="services-item mb-25">
+					<div class="services-icon">
+						<img src="{% static 'assets/images/services/style2/1.png' %}" alt="">
+					</div>
+					<div class="services-text">
+						<h4 class="title"> Choose Your Service</h4>
+						<p class="services-txt">We provide clear choices and easy scheduling options, allowing tailored solutions for all your cleaning needs.</p>
+					</div>
+				</div>
+				<div class="services-item mb-25">
+					<div class="services-icon">
+						<img src="{% static 'assets/images/services/style2/2.png' %}" alt="">
+					</div>
+					<div class="services-text">
+						<h4 class="title"> Set Your Schedule</h4>
+						<p class="services-txt">Select a time that best fits your busy schedule and we will ensure that we stick to this timetable throughout the service delivery.</p>
+					</div>
+				</div>
+				<div class="services-item">
+					<div class="services-icon">
+						<img src="{% static 'assets/images/services/style2/3.png' %}" alt="">
+					</div>
+					<div class="services-text">
+						<h4 class="title"> Confirm & Relax</h4>
+						<p class="services-txt">Once your booking is confirmed, you can relax as our team handles everything with the utmost professionalism.</p>
+					</div>
+				</div>
+				<div class="widget-bg">
+					<img src="{% static 'assets/images/services/style2/lines.png' %}" alt="">
+				</div>
+			</div>
+			
+
+		</div>
+
+		<div class="col-lg-2 services-width"></div>
+
+	</div>
+
+</div>
+
+<!-- How Work Section Start -->
+
+<!-- Contact Start -->
+
+<div class="rs-contact contact-style2 pt-120 pb-120 bg16 md-pt-80 md-pb-80">
+
+	<div class="container">
+
+		<div class="row no-gutters">
+
+			<div class="col-lg-8">
+
+				<div class="contact-section">
+
+					<div class="sec-title2 mb-30">
+
+						<div class="brush-content mb-10">
+
+							<img src="{% static 'assets/images/brush.png' %}" alt="">
+
+							<span class="sub-text">Contact Us</span>
+
+						</div>
+
+						<h2 class="title small">
+
+							Get In Touch
+
+						</h2>
+
+					</div>
+
+					<div class="contact-wrap">
+
+						<form id="contact-form" method="post" action="{% url 'contact' %}">
+							{% csrf_token %}
+									{% if user_messages %}
+									<div class="col-md-12">
+									{% for e in errors %}
+									<div class="alert alert-danger alert-dismissible fade show" role="alert">
+										<strong><i class="bi bi-exclamation-triangle-fill"></i> {{e}}</strong>
+										<button type="button" class="btn-close" data-bs-dismiss="alert"
+											aria-label="Close"></button>
+									</div>
+									{% endfor %}
+									{% for s in success %}
+									<div class="alert alert-success alert-dismissible fade show" role="alert">
+										<strong><i class="bi bi-check-circle-fill"></i> {{s}}</strong>
+										<button type="button" class="btn-close" data-bs-dismiss="alert"
+											aria-label="Close"></button>
+									</div>
+								</div>
+									{% endfor %}
+									{% endif %}
+							<fieldset>
+								<div class="row">
+									<div class="col-lg-6 mb-30 col-md-6 col-sm-6">
+										<input class="from-control" type="text" id="name" name="name" value="{{name}}" placeholder="Name" required>
+									</div> 
+									<div class="col-lg-6 mb-30 col-md-6 col-sm-6">
+										<input class="from-control" type="email" id="email" name="email" value="{{email}}"  placeholder="E-Mail" required>
+									</div>   
+									<div class="col-lg-12 mb-30">
+										<input class="from-control" type="text" id="subject" name="subject" value="{{subject}}" placeholder="Subject" required>
+									</div>   
+									
+									<div class="col-lg-12 mb-30">
+										<textarea class="from-control" id="message" name="message" placeholder="Your message Here" required>{{message}}</textarea>
+									</div>
+								</div>
+								<div class="btn-part">                                            
+									<div class="form-group mb-0">
+										<p class="submit-btn submit-btn3">
+											<input type="submit" value="Submit Now">
+										</p>
+									</div>
+								</div> 
+							</fieldset>
+						</form>  
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="col-lg-4">
+
+				<div class="contact-info-box">
+
+					<div class="sec-title mb-125">
+
+						<h2 class="title">
+
+						   Contact Info
+
+						</h2>
+
+					</div>
+
+					<div class="address-item mb-35">
+
+						<div class="address-icon">
+
+							<i class="fi fi-rr-map-marker-home"></i>
+
+						</div>
+
+						<div class="address-text">
+
+							<span class="label">UK</span>
+
+							   <span class="des">
+								<a href="https://maps.app.goo.gl/dCZfcNvX1g48zk5S7">
+								   Street,<br>
+
+								   United Kingdom.
+								</a>			            
+
+						   </span>
+
+						</div>
+
+					</div>
+
+					<div class="address-item mb-35">
+
+						<div class="address-icon">
+
+							<i class="fi fi-rr-envelope-plus"></i>
+
+						</div>
+
+						<div class="address-text">
+
+							<span class="label">Mail Us</span>
+							<a href="mailto:admin@litdealglobal.co.uk">admin@litdealglobal.co.uk</a>
+							<a href="mailto:info@litdealglobal.co.uk">info@litdealglobal.co.uk</a>
+
+						</div>
+
+					</div>
+
+					<div class="address-item">
+
+						<div class="address-icon">
+
+							<i class="fi fi-rr-phone-call"></i>
+
+						</div>
+
+						<div class="address-text">
+
+							<span class="label">Telephone</span>
+
+							   <span class="des">
+
+								<a href="tel:(+44)123-4567890">(+44) 123-456-7890</a>	            
+
+						   </span>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Contact End -->
+<div class="preloader"></div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'assets/js/req-estimate.js' %}"></script>
+{% endblock %}

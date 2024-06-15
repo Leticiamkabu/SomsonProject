@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About Us | LitDeal Global {% endblock %}
+{% block navbar%}
+<nav class="rs-menu hidden-md">
+	<ul class="nav-menu">
+
+		<li class="menu-item">
+			<a href="{% url 'index' %}">Home</a>
+		</li>
+
+		<li class="menu-item current-menu-item">
+			<a href="{% url 'about' %}">About</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="{% url 'services' %}">Services</a>
+		</li>
+
+		<li>
+			<a href="{% url 'contact' %}">Contact</a>
+		</li>
+
+	</ul> <!-- //.nav-menu -->
+</nav>
+{% endblock %}
+
+{% block canvas_nav %}
+
+<ul class="nav-menu">
+
+	<li class="menu-item">
+		<a href="{% url 'index' %}">Home</a>
+	</li>
+
+	<li class="menu-item current-menu-item">
+		<a href="{% url 'about' %}">About</a>                                                     
+	</li>
+
+	<li class="menu-item">
+		<a href="{% url 'services' %}">Services</a>
+	</li>
+
+	<li>
+		<a href="{% url 'contact' %}">Contact</a>
+	</li>
+
+</ul>
+
+{% endblock %}
+
+{% block content %}
+<div class="rs-breadcrumbs img1">
+    <div class="container">
+        <div class="breadcrumbs-inner">
+            <h1 class="page-title">About Us</h1>
+            <div class="description">
+                <p>Discover our story and the journey that led us to where we are today.<br> Learn about our mission, vision, and values.</p>
+            </div>                       
+        </div>
+    </div>
+</div>
+
+<!-- About Section Start -->
+<div id="rs-about" class="rs-about style4 pt-30 md-pt-80 md-pb-75">
+    <div class="container">
+        <div class="row y-middle">
+            <div class="col-lg-6 md-mb-50">
+                <div class="about-images">
+                    <img src="{% static 'assets/images/about-about.jpg' %}" alt=""/>
+                    <div class="about-widget wow fadeInUp">
+                        <div class="services-item">
+                            <div class="services-content">
+                                <h2 class="services-desc">Your Trusted Cleaning Partner</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 pr-55 md-pr-15">
+                <div class="sec-title2">
+                    <div class="brush-content mb-20">
+                        <img src="{% static 'assets/images/brush.png' %}" alt="">
+                        <span class="sub-text">About LitDeal Global</span>
+                    </div>
+                    <h2 class="title pb-35">LitDeal Global: Your Trusted Cleaning Partner</h2>
+                    <div class="desc pb-25">
+                        LitDeal Global is dedicated to revolutionizing the cleaning industry. Our team is committed to delivering exceptional cleaning services, ensuring your spaces are immaculately clean and sanitized.
+                    </div>
+                    <ul class="dot-list yellow-dot">
+                        <li class="mb-12">We are passionate about providing the best for our customers.</li>
+                        <li class="mb-12">Our team of professionals offers personalized support tailored to your needs.</li>
+                        <li>Our mission is to deliver top-quality cleaning solutions.</li>
+                    </ul>
+                    <div class="btn-part mt-45">
+                        <a class="readon about" href="{% url 'contact' %}">
+                            <span class="btn-text">Contact Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Section End -->
+
+<div id="rs-services" class="rs-services services-lte ">
+    <div class="row y-middle">
+        <div class="col-lg-6 services-width ">
+            <div class="images-bg"></div>
+        </div>
+        <div class="col-lg-4 services-width ">
+            <div class="services-main-part">
+                <div class="sec-title2 mb-30">
+                    <div class="brush-content mb-20">
+                        <img src="{% static 'assets/images/brush.png' %}" alt="">
+                        <span class="sub-text">Our Mission & Vision</span>
+                    </div>
+                    <h2 class="title">
+                        Our Mission
+                    </h2>
+                </div>
+                <div class="services-item mb-25">
+                    <div class="services-text">
+                        <p class="services-txt">To provide exceptional cleaning services that exceed expectations, prioritize customer satisfaction, and contribute to healthier and happier living environments.</p>
+                    </div>
+                </div>
+                <div class="sec-title2 mb-30">
+                    <h2 class="title">
+                        Our Vision
+                    </h2>
+                </div>
+                <div class="services-item mb-25">
+                    <div class="services-text">
+                        <p class="services-txt">To be recognized as a leading provider of eco-friendly and sustainable cleaning solutions, setting industry benchmarks for excellence, reliability, and innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="rs-choose choose-style4 gray-bg pb-40 md-pb-80">
+    <div class="container">
+        <div class="sec-title2 text-center mb-45">
+            <div class="brush-content center-text mb-20">
+                <img src="{% static 'assets/images/brush.png' %}" alt="">
+                <span class="sub-text">Why Choose Us</span>
+            </div>
+            <h2 class="title">Six Reasons to Choose Us</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-65">
+                <div class="services-item">
+                    <div class="services-icon">
+                        <img src="{% static 'assets/images/choose/why/1.png' %}" alt="">
+                    </div>
+                    <div class="services-content">
+                        <h3 class="title">Expertise</h3>
+                        <p class="services-txt">We are experts in our field, delivering top-notch cleaning services with precision and professionalism.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-65">
+                <div class="services-item">
+                    <div class="services-icon">
+                        <img src="{% static 'assets/images/choose/why/2.png' %}" alt="">
+                    </div>
+                    <div class="services-content">
+                        <h3 class="title">Commitment</h3>
+                        <p class="services-txt">We are committed to delivering exceptional results, ensuring customer satisfaction every step of the way.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-65">
+                <div class="services-item">
+                    <div class="services-icon">
+                        <img src="{% static 'assets/images/choose/why/3.png' %}" alt="">
+                    </div>
+                    <div class="services-content">
+                        <h3 class="title">Comprehensiveness</h3>
+                        <p class="services-txt">We offer complete cleaning solutions tailored to meet the diverse needs of our clients.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 md-mb-65">
+                <div class="services-item">
+                    <div class="services-icon">
+                        <img src="{% static 'assets/images/choose/why/4.png' %}" alt="">
+                    </div>
+                    <div class="services-content">
+                        <h3 class="title">Drive</h3>
+                        <p class="services-txt">We are driven by passion and determination to exceed expectations and deliver excellence.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 sm-mb-65">
+                <div class="services-item">
+                    <div class="services-icon">
+                        <img src="{% static 'assets/images/choose/why/5.png' %}" alt="">
+                    </div>
+                    <div class="services-content">
+                        <h3 class="title">Dedication</h3>
+                        <p class="services-txt">We are dedicated to providing top-quality services, ensuring a clean and healthy environment for all.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="services-item">
+                    <div class="services-icon">
+                        <img src="{% static 'assets/images/choose/why/6.png' %}" alt="">
+                    </div>
+                    <div class="services-content">
+                        <h3 class="title">Trustworthiness</h3>
+                        <p class="services-txt">We are trustworthy and reliable, building lasting relationships based on honesty and integrity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+{% endblock %}

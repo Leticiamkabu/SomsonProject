@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Frequently Asked Questions | LitDeal Global {% endblock %}
+{% block navbar%}
+<nav class="rs-menu hidden-md">
+	<ul class="nav-menu">
+
+		<li class="menu-item">
+			<a href="{% url 'index' %}">Home</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="{% url 'about' %}">About</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="{% url 'services' %}">Services</a>
+		</li>
+
+		<li>
+			<a href="{% url 'contact' %}">Contact</a>
+		</li>
+
+	</ul> <!-- //.nav-menu -->
+</nav>
+{% endblock %}
+
+{% block canvas_nav %}
+
+<ul class="nav-menu">
+
+	<li class="menu-item">
+		<a href="{% url 'index' %}">Home</a>
+	</li>
+
+	<li class="menu-item">
+		<a href="{% url 'about' %}">About</a>                                                     
+	</li>
+
+	<li class="menu-item">
+		<a href="{% url 'services' %}">Services</a>
+	</li>
+
+	<li>
+		<a href="{% url 'contact' %}">Contact</a>
+	</li>
+
+</ul>
+
+{% endblock %}
+
+{% block content %}
+<div class="rs-breadcrumbs img1">
+    <div class="container">
+        <div class="breadcrumbs-inner">
+            <h1 class="page-title">Frequently Asked Questions</h1>
+            <div class="description">
+                <p>Find answers to commonly asked questions.<br> Have a question not listed? Feel free to contact us.</p>
+            </div>                       
+        </div>
+    </div>
+</div>
+
+
+<div class="rs-faq faq-style1 pt-120 pb-120 md-pt-80 md-pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 pr-40 md-pr-15 md-mb-50">
+                <div class="faq-content">
+                    <div id="accordion" class="accordion">
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link" href="#" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">How do I schedule a cleaning service?</a>
+                            </div>
+                            <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                    Scheduling a cleaning service is easy. You can either call our customer service number or book online through our website. Our team will then work with you to find a convenient time for the service.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">What cleaning services do you offer?</a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                    We offer a wide range of cleaning services including residential cleaning, commercial cleaning, post-construction cleaning, carpet cleaning, emergency cleaning, and green cleaning.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">How much does your cleaning service cost?</a>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                    The cost of our cleaning service depends on various factors such as the size of the property, the type of cleaning required, and any additional services requested. Contact us for a personalized quote.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">Are your cleaners insured and bonded?</a>
+                            </div>
+                            <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                    Yes, all our cleaners are fully insured and bonded for your peace of mind. You can trust us to handle your property with care and professionalism.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false">Do I need to provide cleaning supplies?</a>
+                            </div>
+                            <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                    No, we provide all the necessary cleaning supplies and equipment. Our professional cleaners come fully equipped to handle any cleaning job efficiently and effectively.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <a class="card-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false">What happens if I need to reschedule?</a>
+                            </div>
+                            <div id="collapseSix" class="collapse" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                    If you need to reschedule your cleaning service, please contact us as soon as possible. We will do our best to accommodate your request and find a new appointment time that works for you.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="rs-contact contact-style5">
+                    <div class="contact-section">
+                        <div class="sec-title2 mb-35">
+                            <h2 class="title title3 white-color">Didn't Find What You<br>Need? Ask Us</h2>
+                        </div>
+                        <div class="contact-wrap">
+                            <div id="form-messages" class="mb-10" style="font-weight: bold;color: #fff;"></div>
+                    
+                            <form id="req-est" method="post" action="{% url 'faqs' %}">
+                                {% csrf_token %}
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-lg-12 mb-30">
+                                            <input class="from-control" type="text" id="name" name="name" placeholder="Name" required="">
+                                        </div> 
+                                        <div class="col-lg-12 mb-30">
+                                            <input class="from-control" type="text" id="email" name="email" placeholder="E-Mail" required="">
+                                        </div>   
+                                        <div class="col-lg-12 mb-35">
+                                            <textarea class="from-control" id="message" name="message" placeholder="Your message Here" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="btn-part">                                            
+                                        <div class="form-group mb-0">
+                                            <p class="submit-btn submit-btn2 faq-btn">
+                                                <span class="arrow-btn">
+                                                    <input type="submit" value="Submit Now">
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div> 
+                                </fieldset>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="preloader"></div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'assets/js/req-estimate.js' %}"></script>
+{% endblock %}

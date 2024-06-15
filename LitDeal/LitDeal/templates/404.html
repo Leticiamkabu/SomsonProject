@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found | LitDeal Global</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Rabboni Services Limited stand as a prominent provider of care and nursing staff, catering to both private and public sectors. Our services extend to some of the UK's premier care groups.">
+    <meta name="keywords" content="Rabboni Services Limited,rabboni.co.uk,robboni,care work,home care,staffing,cleaning services,uk care,uk staffing">
+
+    <link rel="apple-touch-icon" href="{% static 'assets/images/apple-touch-icon.png' %}">
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/favicon.ico' %}">
+        
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="error" id="error">
+        <div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+            <div class="content text-center">
+                <img style="max-width: 80%;" src="{% static 'assets/images/404.png' %}">
+                <h1 style="font-size: 24px;">Oops, looks like the page is lost.</h1>
+                <p style="font-size: 18px;" class="sub-header text-block-narrow">This is not a fault, just an accident that was not intentional.</p>
+                <a href="/" class="btn btn-primary mt-3">Go Back Home</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
