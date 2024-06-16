@@ -24,7 +24,7 @@ def main():
     if 'runserver' in sys.argv:
         # Find the index of 'runserver' and insert the address:port argument after it
         runserver_index = sys.argv.index('runserver')
-        sys.argv.insert(runserver_index + 1, '0.0.0.0:' + port)
+        sys.argv.insert(runserver_index + 1, port)
     else:
         # If 'runserver' is not in the arguments, append it along with the address:port argument
         sys.argv += ['runserver', port]
