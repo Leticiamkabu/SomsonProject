@@ -20,7 +20,14 @@ def main():
     port = os.environ.get('PORT', '8000')
 
     # Modify the command line arguments to include the port
-    sys.argv += ['runserver', '0.0.0.0:' + port]
+    # Check if 'runserver' is already in the arguments
+    if 'runserver' in sys.argv:
+        # Find the index of 'runserver' and insert the address:port argument after it
+        runserver_index = sys.argv.index('runserver')
+        sys.argv.insert(runserver_index + 1, '0.0.0.0:' + port)
+    else:
+        # If 'runserver' is not in the arguments, append it along with the address:port argument
+        sys.argv += ['runserver', '0.0.0.0:' + port]
     execute_from_command_line(sys.argv)
 
 
