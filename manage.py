@@ -27,7 +27,7 @@ def main():
         sys.argv.insert(runserver_index + 1, '0.0.0.0:' + port)
     else:
         # If 'runserver' is not in the arguments, append it along with the address:port argument
-        sys.argv += ['runserver', '0.0.0.0:' + port]
+        sys.argv += ['runserver', port]
     execute_from_command_line(sys.argv)
 
 
